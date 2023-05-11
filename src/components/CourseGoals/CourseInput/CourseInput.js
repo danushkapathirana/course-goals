@@ -26,10 +26,10 @@ const CourseInput = (props) => {
     
     return(
         <form onSubmit={formSubmitHandler}>
-            <div className="form-control">
-                {/* dynamic inline styles */}
-                <label style={{color: !isValid ? "red" : "black"}}>Course Goal</label>
-                <input type="text" onChange={goalInputChangeHandler} style={{borderColor: !isValid ? "#ccc" : "black", background: !isValid ? "salmon" : "transparent"}} />
+            <div className={`form-control ${!isValid ? "invalid" : ""}`}>
+                {/* dynamic css classes */}
+                <label>Course Goal</label>
+                <input type="text" onChange={goalInputChangeHandler} />
             </div>
             <Button type="submit">Add Goal</Button>
         </form>
@@ -37,3 +37,9 @@ const CourseInput = (props) => {
 }
 
 export default CourseInput
+
+
+// dynamic inline styles
+
+{/* <label style={{color: !isValid ? "red" : "black"}}>Course Goal</label>
+<input type="text" onChange={goalInputChangeHandler} style={{borderColor: !isValid ? "#ccc" : "black", background: !isValid ? "salmon" : "transparent"}} /> */}

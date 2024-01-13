@@ -10,3 +10,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
     <App />
 )
+
+
+/**
+ * libraries
+ * 
+ * npm install styled-components
+ */
